@@ -1,0 +1,152 @@
+body { margin:0; background:#0b1020; color:#e9eefc; font-family: Arial, sans-serif; }
+a { color: inherit; text-decoration:none; }
+.appShell { min-height:100vh; }
+.nav { display:flex; justify-content:space-between; align-items:center; padding:14px 18px; border-bottom:1px solid #263058; position:sticky; top:0; background:#0b1020; }
+.brand { font-weight:900; }
+.links { display:flex; gap:12px; flex-wrap:wrap; }
+.links a { padding:8px 10px; border:1px solid #263058; border-radius:10px; color:#b9c5f0; font-weight:700; }
+.links a.active { background:#121a33; color:#e9eefc; }
+.container { width:min(1100px, 100%); margin:18px auto; padding:0 16px; }
+.card { background:#121a33; border:1px solid #263058; border-radius:16px; padding:16px; box-shadow: 0 12px 30px rgba(0,0,0,0.30); }
+.muted { color:#b9c5f0; }
+.row { display:flex; gap:10px; margin-top:10px; flex-wrap:wrap; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media(max-width:900px){ .grid2{grid-template-columns:1fr;} }
+.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+@media(max-width:900px){ .grid3{grid-template-columns:1fr;} }
+label { display:block; margin-top:10px; margin-bottom:6px; color:#b9c5f0; font-weight:700; }
+input, textarea, select { width:100%; padding:10px; border-radius:12px; border:1px solid #263058; background:#0e1530; color:#e9eefc; outline:none; }
+.btn { padding:10px 12px; border-radius:12px; border:1px solid #33407a; background:transparent; color:#e9eefc; font-weight:900; cursor:pointer; }
+.btn.primary { background:#2a3cff; border-color:#2a3cff; }
+.alert { margin-top:10px; padding:10px; border-radius:12px; background: rgba(231,76,60,0.12); border:1px solid rgba(231,76,60,0.45); }
+.list { margin-top:12px; display:flex; flex-direction:column; gap:10px; }
+.item { padding:12px; border:1px solid #263058; background:#0e1530; border-radius:14px; }
+.itemTop { display:flex; justify-content:space-between; gap:10px; }
+.itemText { margin-top:8px; font-weight:800; }
+.kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:10px; }
+@media(max-width:900px){ .kpis{grid-template-columns:1fr 1fr;} }
+.kpi { background:#0e1530; border:1px solid #263058; border-radius:14px; padding:12px; }
+.big { font-size:22px; font-weight:900; margin-top:4px; }
+.search { margin-top:10px; }
+
+/* Risk badges */
+.riskBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid transparent;
+}
+
+.riskHIGH {
+  background: rgba(231, 76, 60, 0.18);
+  border-color: rgba(231, 76, 60, 0.55);
+  color: #ffd0d0;
+}
+
+.riskMEDIUM {
+  background: rgba(241, 196, 15, 0.18);
+  border-color: rgba(241, 196, 15, 0.55);
+  color: #ffe8a3;
+}
+
+.riskLOW {
+  background: rgba(46, 204, 113, 0.18);
+  border-color: rgba(46, 204, 113, 0.55);
+  color: #c9ffe0;
+}
+
+/* Row border highlight by risk */
+.itemBorderHIGH { border-color: rgba(231, 76, 60, 0.55) !important; }
+.itemBorderMEDIUM { border-color: rgba(241, 196, 15, 0.55) !important; }
+.itemBorderLOW { border-color: rgba(46, 204, 113, 0.55) !important; }
+
+/* Alerts UI */
+.alertCard{
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid #263058;
+  background: #0e1530;
+}
+
+.alertTop{
+  display:flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items:center;
+  margin-bottom: 6px;
+}
+
+.pillTag{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid transparent;
+}
+
+.pillTag.critical{
+  background: rgba(231, 76, 60, 0.18);
+  border-color: rgba(231, 76, 60, 0.55);
+  color: #ffd0d0;
+}
+
+.pillTag.spike{
+  background: rgba(155, 89, 182, 0.18);
+  border-color: rgba(155, 89, 182, 0.55);
+  color: #f0d7ff;
+}
+
+.pillTag.surge{
+  background: rgba(241, 196, 15, 0.18);
+  border-color: rgba(241, 196, 15, 0.55);
+  color: #ffe8a3;
+}
+
+.pillTag.backlog{
+  background: rgba(52, 152, 219, 0.18);
+  border-color: rgba(52, 152, 219, 0.55);
+  color: #d7f0ff;
+}
+
+.alertCard.critical{ border-color: rgba(231, 76, 60, 0.55); }
+.alertCard.spike{ border-color: rgba(155, 89, 182, 0.55); }
+.alertCard.surge{ border-color: rgba(241, 196, 15, 0.55); }
+.alertCard.backlog{ border-color: rgba(52, 152, 219, 0.55); }
+
+.alertActionRow{ margin-top: 8px; }
+
+.emptyBox{
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px dashed rgba(38,48,88,0.8);
+  background: rgba(14,21,48,0.35);
+}
+
+/* Architecture page */
+.archGrid{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.archBox{
+  border: 1px solid #263058;
+  background: #0e1530;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.archTitle{
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.archArrow{
+  text-align:center;
+  color:#b9c5f0;
+  font-weight: 900;
+}
